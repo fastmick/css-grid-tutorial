@@ -1,0 +1,26 @@
+@mixin font-size($size, $base: $_base-font-size) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+
+/*
+grid mixins
+*/
+
+@mixin grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+;
+@mixin grid-row($row) {
+    -ms-grid-row: $row;
+    grid-row: $row;
+}
+
+@mixin grid-column($column, $span) {
+    -ms-grid-column: $column;
+    -ms-grid-column-span: $span;
+    grid-column: $column / span $span;
+}

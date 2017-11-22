@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // background: #fff;
+    background-image: url(../images/page-kachel-bg.jpg);
+    background-repeat: repeat;
+    color: $color-text;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.site {
+    position: relative;
+}
+
+.site-header {
+    &__infos {
+        @include font-size(14);
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+}
+
+.aside-home-page,
+.main-content {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.main-content {
+    @media screen and (min-width: 768px) {
+        border-left: 1px solid $color-border;
+        border-right: 1px solid $color-border;
+    }
+}
+
+.top-news {
+    display: block;
+    margin: 0 0 20px 0;
+}
