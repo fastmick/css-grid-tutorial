@@ -1,0 +1,14 @@
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+    border: 1px solid $color-border;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    img {
+        border: 1px solid $color-border;
+    }
+}

@@ -1,0 +1,112 @@
+.main-wrapper {
+    border: 1px solid rgb(197, 101, 101);
+    display: -ms-grid;
+    display: grid;
+    // -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // -ms-grid-gap: 12px;
+    // grid-gap: 12px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+}
+
+.content {
+    background-color: rgb(111, 96, 238);
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+}
+
+aside {
+    background-color: rgb(178, 178, 184);
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+}
+
+footer {
+    background-color: rgb(10, 94, 66);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+    div:first-child {
+        background-color: rgb(165, 243, 217);
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1 / span 2;
+    }
+    div:last-child {
+        background-color: rgb(99, 92, 93);
+        -ms-grid-row: 2;
+        grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .content {
+        background-color: rgb(111, 96, 238);
+        -ms-grid-row: 2;
+        grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-column: 1 / span 3;
+    }
+    aside {
+        background-color: rgb(178, 178, 184);
+        -ms-grid-row: 2;
+        grid-row: 2;
+        -ms-grid-column: 4;
+        grid-column: 4;
+    }
+    footer {
+        div:first-child {
+            background-color: rgb(165, 243, 217);
+            -ms-grid-row: 1;
+            grid-row: 1;
+            -ms-grid-column: 1;
+            grid-column: 1;
+        }
+        div:last-child {
+            background-color: rgb(99, 92, 93);
+            -ms-grid-row: 1;
+            grid-row: 1;
+            -ms-grid-column: 2;
+            grid-column: 2;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {}

@@ -1,0 +1,33 @@
+.news-block {
+    .news-block-wrapper & {
+        padding: 10px;
+        &:not(:last-child) {
+            border-right: 1px solid $color-border;
+        }
+    }
+    &__headline {
+        @include font-size(20);
+        border-bottom: 1px solid $color-border;
+        // font-weight: normal;
+        margin: 0 0 15px;
+        padding-bottom: 5px;
+    }
+    &__text {
+        display: block;
+        &::first-letter {
+            @include font-size(26);
+            text-transform: uppercase;
+        }
+    }
+    &--with-image {
+        figure {
+            display: inline-block;
+        }
+    }
+    &.show-full-news-block {
+        background-color: #fff;
+        position: absolute;
+        top: 20px;
+        // width: 300px;
+    }
+}

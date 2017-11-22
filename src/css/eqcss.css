@@ -1,0 +1,7 @@
+@element .news-block and (min-width: 500px) {
+    .news-block--with-image figure {
+        float: left;
+        margin-right: 20px;
+        width: 50%;
+    }
+}
