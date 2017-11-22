@@ -23,7 +23,7 @@
         
         .site {
             border: 1px solid #666;
-            margin: 0 auto;
+            margin: 50px auto 0;
             position: relative;
             max-width: 1000px;
             display: -ms-grid;
@@ -83,6 +83,25 @@
             grid-column: 1 / span 8;
             -ms-grid-row: 5;
             grid-row: 5;
+        }
+        
+        @media (min-width: 48em) {
+            main {
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 5;
+                grid-column: 1 / span 5;
+            }
+            aside {
+                -ms-grid-column: 6;
+                -ms-grid-column-span: 3;
+                grid-column: 6 / span 3;
+                -ms-grid-row: 3;
+                grid-row: 3;
+            }
+            footer {
+                -ms-grid-row: 4;
+                grid-row: 4;
+            }
         }
     </style>
 
