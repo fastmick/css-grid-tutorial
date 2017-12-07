@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css grid</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .site {
+            border: 1px solid #666;
+            margin: 50px auto 0;
+            position: relative;
+            max-width: 1000px;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+            grid-template-columns: repeat(8, 12.5%);
+        }
+
+        header,
+        .site>nav,
+        aside,
+        main,
+        footer {
+            padding: 20px;
+        }
+
+        header {
+            background-color: rgb(148, 146, 146);
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 8;
+            grid-column: 1 / span 8;
+            -ms-grid-row: 1;
+            grid-row: 1;
+
+            display: flex;
+            align-content: center;
+        }
+
+        .site>nav {
+            background-color: rgb(65, 62, 62);
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 8;
+            grid-column: 1 / span 8;
+            -ms-grid-row: 2;
+            grid-row: 2;
+        }
+
+        main {
+            background-color: rgb(245, 46, 46);
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 8;
+            grid-column: 1 / span 8;
+            -ms-grid-row: 3;
+            grid-row: 3;
+        }
+
+        aside {
+            background-color: rgb(16, 64, 197);
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 8;
+            grid-column: 1 / span 8;
+            -ms-grid-row: 4;
+            grid-row: 4;
+        }
+
+        footer {
+            background-color: rgb(3, 75, 19);
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 8;
+            grid-column: 1 / span 8;
+            -ms-grid-row: 5;
+            grid-row: 5;
+        }
+
+        header nav {
+            display: flex;
+            margin-left: auto;
+        }
+
+        header ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li {
+            line-height: 1;
+            align-self: center;
++      }
+
+
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (min-width: 48em) {
+            main {
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 5;
+                grid-column: 1 / span 5;
+            }
+            aside {
+                -ms-grid-column: 6;
+                -ms-grid-column-span: 3;
+                grid-column: 6 / span 3;
+                -ms-grid-row: 3;
+                grid-row: 3;
+            }
+            footer {
+                -ms-grid-row: 4;
+                grid-row: 4;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="site">
+
+        <header>
+            <h1>logo</h1>
+            <nav>
+                <ul>
+                    <li>Mein Konto</li>
+                    <li>Impressum</li>
+                    <li>Kontakt</li>
+                </ul>
+            </nav>
+        </header>
+
+        <nav>
+            navigation
+        </nav>
+
+        <main>
+            content
+        </main>
+
+        <aside>
+            aside
+        </aside>
+
+        <footer>
+            footer
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
