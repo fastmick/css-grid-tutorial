@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css grid</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .infos {
+            border: 1px solid #666;
+            margin: 50px auto 0;
+            padding: 25px;
+            position: relative;
+            max-width: 1000px;
+        }
+
+        .site {
+            border: 1px solid #666;
+            margin: 50px auto;
+            position: relative;
+            max-width: 1000px;
+            display: -ms-grid;
+            display: grid;
+            grid-template-columns: 150px 1fr 1fr 250px;
+            grid-template-rows: 100px 1fr 1fr 100px;
+            grid-template-areas: 
+            "header header header header" 
+            "nav main main aside" 
+            "nav main main aside" 
+            "nav footer footer footer";
+        }
+
+        header,
+        nav,
+        aside,
+        main,
+        footer {
+            padding: 20px;
+        }
+
+        header {
+            background-color: rgb(148, 146, 146);
+            grid-area: header;
+        }
+
+        nav {
+            background-color: rgb(65, 62, 62);
+            grid-area: nav;
+        }
+
+        main {
+            background-color: rgb(245, 46, 46);
+            grid-area: main;
+        }
+
+        aside {
+            background-color: rgb(16, 64, 197);
+            grid-area: aside;
+        }
+
+        footer {
+            background-color: rgb(3, 75, 19);
+            grid-area: footer;
+        }
+
+        
+        @media (min-width: 48em) {}
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="site">
+
+        <header>
+            header
+        </header>
+
+        <nav>
+            navigation
+        </nav>
+
+        <main>
+            content
+        </main>
+
+        <aside>
+            aside
+        </aside>
+
+        <footer>
+            footer
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

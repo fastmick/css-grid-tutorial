@@ -25,3 +25,6 @@ Weitere Anwendungsbeispiele
 
 **grid areas:** Grid Areas mit Fallback für den Internet Explorer
 
+**alternative layouts:**
+
+- layout 1
