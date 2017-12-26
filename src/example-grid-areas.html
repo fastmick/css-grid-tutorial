@@ -22,19 +22,26 @@
             font-size: 16px;
         }
 
+        .infos {
+            border: 1px solid #666;
+            margin: 50px auto 0;
+            padding: 25px;
+            position: relative;
+            max-width: 1000px;
+        }
+
         .site {
             border: 1px solid #666;
             margin: 50px auto 0;
             position: relative;
             max-width: 1000px;
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: 1fr 1fr 1fr 1fr;
             grid-template-columns: repeat(4, 1fr);
+            -ms-grid-rows: 100px 1fr 1fr 100px;
             grid-template-rows: 100px 1fr 1fr 100px;
-            grid-template-areas: 
-                "header header header header"
-                "nav nav nav nav"
-                "main main main aside"
-                "footer footer footer footer";
+            grid-template-areas: "header header header header" "nav nav nav nav" "main main main aside" "footer footer footer footer";
         }
 
         header,
@@ -48,7 +55,6 @@
         header {
             background-color: rgb(148, 146, 146);
             grid-area: header;
-
         }
 
         nav {
@@ -59,29 +65,77 @@
         main {
             background-color: rgb(245, 46, 46);
             grid-area: main;
-
         }
 
         aside {
             background-color: rgb(16, 64, 197);
             grid-area: aside;
-
         }
 
         footer {
             background-color: rgb(3, 75, 19);
             grid-area: footer;
-
         }
 
-        @media (min-width: 48em) {
-            
+        @supports(display: grid) {
+            /* body {
+                background-color: #f00;
+            } */
         }
+
+        @supports(display: -ms-grid) {
+            header {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 4;
+            }
+
+            nav {
+                -ms-grid-row: 2;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 4;
+            }
+
+            main {
+                -ms-grid-row: 3;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 3;
+            }
+
+            aside {
+                -ms-grid-row: 3;
+                -ms-grid-column: 4;
+                -ms-grid-column-span: 4;
+            }
+
+            footer {
+                -ms-grid-row: 4;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 4;
+            }
+        }
+
+        @media (min-width: 48em) {}
     </style>
 
 </head>
 
 <body>
+    <div class="infos">
+        <p>Das Attribut grid-area wird beim IE leider erst ab edge 16 unterstützt</p>
+        <p>
+            Fallback für den IE:<br>
+            @supports(display: -ms-grid) {<br>
+                header {<br>
+                    -ms-grid-row: 1;<br>
+                    -ms-grid-column: 1;<br>
+                    -ms-grid-column-span: 4;<br>
+                }<br>
+            }<br>
+            etc. 
+        </p>
+    </div>
+
     <div class="site">
 
         <header>
