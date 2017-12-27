@@ -86,7 +86,67 @@
 </head>
 
 <body>
-    
+        <div class="infos">
+                <pre>&lt;div class=&quot;site&quot;&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;header&gt; header &lt;/header&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;nav&gt; navigation &lt;/nav&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;main&gt; content &lt;/main&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;aside&gt; aside &lt;/aside&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;footer&gt; footer &lt;/footer&gt;
+                    <br> &lt;/div&gt;
+                </pre>
+        
+                <pre>
+.site {
+    border: 1px solid #666;
+    margin: 50px auto;
+    position: relative;
+    max-width: 1000px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 250px;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-areas: 
+    "header header header header" 
+    "nav main main aside" 
+    "nav main main aside" 
+    "nav footer footer footer";
+}
+
+header,
+nav,
+aside,
+main,
+footer {
+    padding: 20px;
+}
+
+header {
+    background-color: rgb(148, 146, 146);
+    grid-area: header;
+}
+
+nav {
+    background-color: rgb(65, 62, 62);
+    grid-area: nav;
+}
+
+main {
+    background-color: rgb(245, 46, 46);
+    grid-area: main;
+}
+
+aside {
+    background-color: rgb(16, 64, 197);
+    grid-area: aside;
+}
+
+footer {
+    background-color: rgb(3, 75, 19);
+    grid-area: footer;
+}
+                </pre>
+            </div>
     <div class="site">
 
         <header>

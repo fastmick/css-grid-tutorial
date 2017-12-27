@@ -124,14 +124,71 @@
     <div class="infos">
         <p>Das Attribut grid-area wird beim IE leider erst ab edge 16 unterstützt</p>
         <p>
+            <pre>
+.site {
+    border: 1px solid #666;
+    margin: 50px auto 0;
+    position: relative;
+    max-width: 1000px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 100px 1fr 1fr 100px;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-areas: 
+    "header header header header" 
+    "nav nav nav nav" 
+    "main main main aside" 
+    "footer footer footer footer";
+}
+
+header,
+nav,
+aside,
+main,
+footer {
+    padding: 20px;
+}
+
+header {
+    background-color: rgb(148, 146, 146);
+    grid-area: header;
+}
+
+nav {
+    background-color: rgb(65, 62, 62);
+    grid-area: nav;
+}
+
+main {
+    background-color: rgb(245, 46, 46);
+    grid-area: main;
+}
+
+aside {
+    background-color: rgb(16, 64, 197);
+    grid-area: aside;
+}
+
+footer {
+    background-color: rgb(3, 75, 19);
+    grid-area: footer;
+}
+
+            </pre>
+
+
             Fallback für den IE:<br>
-            @supports(display: -ms-grid) {<br>
-                header {<br>
-                    -ms-grid-row: 1;<br>
-                    -ms-grid-column: 1;<br>
-                    -ms-grid-column-span: 4;<br>
-                }<br>
-            }<br>
+            <pre>
+@supports(display: -ms-grid) {
+    header {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+    }
+}
+        </pre>
             etc. 
         </p>
     </div>
