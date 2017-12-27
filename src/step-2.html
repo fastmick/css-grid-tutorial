@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css grid</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -15,12 +16,18 @@
         * {
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
         }
-        
+        .infos {
+            border: 1px solid #666;
+            margin: 50px auto 25px;
+            padding: 25px;
+            position: relative;
+            max-width: 1000px;
+        }
         .site {
             border: 1px solid #666;
             margin: 0 auto;
@@ -31,7 +38,7 @@
             -ms-grid-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
             grid-template-columns: repeat(8, 12.5%);
         }
-        
+
         header,
         nav,
         aside,
@@ -39,23 +46,23 @@
         footer {
             padding: 20px;
         }
-        
+
         header {
             background-color: rgb(148, 146, 146);
         }
-        
+
         nav {
             background-color: rgb(65, 62, 62);
         }
-        
+
         aside {
             background-color: rgb(245, 46, 46);
         }
-        
+
         main {
             background-color: rgb(16, 64, 197);
         }
-        
+
         footer {
             background-color: rgb(3, 75, 19);
         }
@@ -64,6 +71,28 @@
 </head>
 
 <body>
+    <div class="infos">
+        <pre>&lt;div class=&quot;site&quot;&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;header&gt; header &lt;/header&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;nav&gt; navigation &lt;/nav&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;main&gt; content &lt;/main&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;aside&gt; aside &lt;/aside&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;footer&gt; footer &lt;/footer&gt;
+            <br> &lt;/div&gt;
+        </pre>
+
+        <pre>
+.site {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1000px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-columns: repeat(8, 12.5%);
+}
+        </pre>
+    </div>
     <div class="site">
 
         <header>
