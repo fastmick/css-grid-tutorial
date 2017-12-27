@@ -20,7 +20,13 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
         }
-        
+        .infos {
+            border: 1px solid #666;
+            margin: 50px auto 25px;
+            padding: 25px;
+            position: relative;
+            max-width: 1000px;
+        }
         .site {
             border: 1px solid #666;
             margin: 0 auto;
@@ -89,6 +95,63 @@
 </head>
 
 <body>
+        <div class="infos">
+            <pre>&lt;div class=&quot;site&quot;&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;header&gt; header &lt;/header&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;nav&gt; navigation &lt;/nav&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;main&gt; content &lt;/main&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;aside&gt; aside &lt;/aside&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;footer&gt; footer &lt;/footer&gt;
+                <br> &lt;/div&gt;
+            </pre>
+                
+                <pre>
+header {
+    background-color: rgb(148, 146, 146);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / span 8;
+    -ms-grid-row: 1;
+    grid-row: 1;
+}
+
+nav {
+    background-color: rgb(65, 62, 62);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / span 8;
+    -ms-grid-row: 2;
+    grid-row: 2;
+}
+
+main {
+    background-color: rgb(245, 46, 46);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / span 8;
+    -ms-grid-row: 3;
+    grid-row: 3;
+}
+
+aside {
+    background-color: rgb(16, 64, 197);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / span 8;
+    -ms-grid-row: 4;
+    grid-row: 4;
+}
+
+footer {
+    background-color: rgb(3, 75, 19);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / span 8;
+    -ms-grid-row: 5;
+    grid-row: 5;
+}
+                </pre>
+            </div>
     <div class="site">
 
         <header>
